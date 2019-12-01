@@ -13,6 +13,11 @@ public class GreetingController {
         return "greeting";
     }
 
+    @GetMapping("/blog")
+    public String blog() {
+        return "blog";
+    }
+
     @GetMapping("/")
     public String main(Model model) {
         model.addAttribute("some", "hello, letsCode!");
