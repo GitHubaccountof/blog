@@ -21,5 +21,8 @@
     <style type="text/css">
         <#include "../css/clean-blog.min.css">
     </style>
+    <style type="text/css">
+        <#include "../css/add.css">
+    </style>
     <title>Document</title>
 </head>

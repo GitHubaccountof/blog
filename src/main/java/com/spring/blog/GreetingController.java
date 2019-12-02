@@ -18,6 +18,11 @@ public class GreetingController {
         return "blog";
     }
 
+    @GetMapping("/create_page")
+    public String create() {
+        return "create";
+    }
+
     @GetMapping("/")
     public String main(Model model) {
         model.addAttribute("some", "hello, letsCode!");
