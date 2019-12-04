@@ -1,16 +1,33 @@
-package com.spring.blog;
+package com.spring.blog.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.spring.blog.entity.Content;
+import com.spring.blog.service.ContentService;
 
 @Controller
 public class GreetingController {
-    @GetMapping("/greeting")
+    @Autowired
+    private ContentService contentService;
+
+    @GetMapping("/test")
     public String greeting(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
+        Iterable<Content> contents = contentService.findAll();
         model.addAttribute("name", name);
-        return "greeting";
+        model.addAttribute("contents", contents);
+        return "test";
+    }
+
+    @GetMapping("/blog/{id}")
+    public String greeting(@PathVariable Long id, Model model) {
+        Content content = contentService.findById(id);
+        model.addAttribute("content", content);
+        return "blog";
     }
 
     @GetMapping("/blog")

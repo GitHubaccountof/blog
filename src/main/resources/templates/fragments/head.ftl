@@ -1,3 +1,4 @@
+<#macro header>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +22,7 @@
     <style type="text/css">
         <#include "../css/clean-blog.min.css">
     </style>
-    <style type="text/css">
-        <#include "../css/add.css">
-    </style>
+    <#nested>
     <title>Document</title>
 </head>
+</#macro>
