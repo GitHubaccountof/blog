@@ -1,7 +1,12 @@
-<!DOCTYPE html>
+<#import "fragments/head.ftl" as c>
+
 <html lang="en">
 
-<#include "fragments/head.ftl">
+<@c.header>
+<style type="text/css">
+    <#include "css/add.css">
+</style>
+</@c.header>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -16,16 +21,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="../">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="/blog">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="post.html">Sample Post</a>
+                        <a class="nav-link" href="/create_page">Create page</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
