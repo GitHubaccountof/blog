@@ -33,7 +33,7 @@
     </div>
 </nav>
 <header class="masthead"
-        style="background-image: url('http://hpc-asia.com/wp-content/uploads/2017/11/F7148507-7860-465B-950B-2F55B420CEDB-1229-0000010877FFE7CA_tmp-1.jpg')">
+        style="background-image: url('/img/${content.image}')">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">

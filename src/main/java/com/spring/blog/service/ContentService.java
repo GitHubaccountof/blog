@@ -7,12 +7,20 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ContentService {
-    @Autowired
     private ContentRepository contentRepository;
+
+    @Autowired
+    public ContentService(ContentRepository contentRepository) {
+        this.contentRepository = contentRepository;
+    }
 
     public Content findById(long id) {
         return contentRepository.findById(id)
                 .orElse(null);
+    }
+
+    public void save(Content content) {
+        contentRepository.save(content);
     }
 
     public Iterable<Content> findAll() {

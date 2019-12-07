@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+<#import "fragments/head.ftl" as c>
+
 <html lang="en">
 
-<#include "fragments/head.ftl">
+<@c.header/>
 
 <body>
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -39,13 +40,13 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/2018/04/gettyimages-634155458.jpg" alt="First slide" height="500px">
+            <img class="d-block w-100" src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/2018/04/gettyimages-634155458.jpg" alt="First slide" height="562px">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/2018/04/gettyimages-634155458.jpg" alt="Second slide" height="500px">
+            <img class="d-block w-100" src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/2018/04/gettyimages-634155458.jpg" alt="Second slide" height="562px">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/2018/04/gettyimages-634155458.jpg" alt="Third slide" height="500px">
+            <img class="d-block w-100" src="https://www.syfy.com/sites/syfy/files/styles/1200x680/public/2018/04/gettyimages-634155458.jpg" alt="Third slide" height="562px">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -66,6 +67,23 @@
     <!-- START THE FEATURETTES -->
 
     <hr class="featurette-divider">
+
+    <#list blogs as blog>
+        <div class="row featurette">
+            <div class="col-md-4">
+                <div class="featurette-image img-fluid mx-auto" style="width: 350px; height: 350px; background-image: url('/img/${blog.image}');"></div>
+                <div style="position: relative; bottom: 355px; left: -315px">
+                    <button type="button" class="close" aria-label="Close" style="font-size: 50px;">&times;</button>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h2 class="featurette-heading">${blog.title}</h2>
+                <div class="cope_text line-clamp">
+                    <p class="lead">${blog.description}</p>
+                </div>
+            </div>
+        </div>
+    </#list>
 
     <div class="row featurette">
         <div class="col-md-4">

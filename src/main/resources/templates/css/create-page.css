@@ -1,30 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
-
 html {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 p {
-  margin: 0;
+    margin: 0;
 }
 
 .post-heading {
-  margin-bottom: 40px;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    margin-bottom: 40px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .add-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
 }
-
 
 .bt {
     width: 300px;
@@ -41,7 +39,6 @@ p {
     outline: none;
     text-decoration: none;
     text-align: center;
-  
 }
 
 .more-bt {
@@ -52,7 +49,7 @@ p {
 }
 
 .more-bt p {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 #wrapper.smooth section.smoothy.show {

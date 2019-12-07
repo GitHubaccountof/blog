@@ -20,6 +20,12 @@ public class Content {
     public Content() {
     }
 
+    public Content(String title, String tag, String description) {
+        this.title = title;
+        this.tag = tag;
+        this.description = description;
+    }
+
     public Long getId() {
         return id;
     }
