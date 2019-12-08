@@ -1,2 +1,1 @@
-# blog
-Test blog
+# Simple blog
