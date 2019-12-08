@@ -1,8 +1,7 @@
-package com.spring.blog.config;
+package com.spring.blog.controller.user;
 
 import com.spring.blog.entity.User;
 import com.spring.blog.enumeration.Role;
-import com.spring.blog.repository.UserRepository;
 import com.spring.blog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,7 +27,7 @@ public class RegistrationController {
 
     @PostMapping("/registration")
     public String addUser(User user, Model model) {
-        User userFromDb = userService.findByUsername(user.getUsername());
+        User userFromDb = (User) userService.loadUserByUsername(user.getUsername());
 
         if (userFromDb != null) {
             model.addAttribute("message", "User exists!");

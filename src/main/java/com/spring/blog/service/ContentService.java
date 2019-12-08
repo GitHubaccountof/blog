@@ -26,4 +26,8 @@ public class ContentService {
     public Iterable<Content> findAll() {
         return contentRepository.findAll();
     }
+
+    public void deleteById(Long id) {
+        contentRepository.deleteById(id);
+    }
 }
